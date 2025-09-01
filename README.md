@@ -1,6 +1,6 @@
 # 📱 Next Message
 
-**Sistema profesional de envío masivo de mensajes de WhatsApp** usando Evolution API con arquitectura moderna, seguridad reforzada y fácil configuración.
+**Sistema de envío masivo de mensajes de WhatsApp** usando Evolution API con arquitectura moderna, seguridad reforzada y fácil configuración.
 
 ## ✨ Características Principales
 
