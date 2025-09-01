@@ -30,7 +30,6 @@
 ### Software Necesario
 - **Python 3.8+** (recomendado 3.10+)
 - **Docker Desktop** (para Evolution API)
-- **Git** (para clonar el repositorio)
 - **Make** (opcional, para comandos automatizados)
 
 ### Sistemas Operativos Soportados
@@ -137,7 +136,7 @@ Carlos Imagen sin texto,+525511111111,image,mi_imagen.png,
 
 ### 3. Añadir Imágenes
 
-**✅ Funcionalidad Completa**: El sistema envía imágenes locales desde la carpeta `images/`.
+El sistema envía imágenes locales desde la carpeta `images/`.
 
 #### **Cómo Usar Imágenes:**
 
@@ -360,21 +359,6 @@ make restart
 999123456789     # Código de país desconocido
 ```
 
-## 🔒 Seguridad
-
-### ⚠️ **IMPORTANTE - Archivos Sensibles**
-
-Este proyecto incluye un `.gitignore` que protege archivos sensibles:
-
-```bash
-# Archivos que NO se suben a GitHub:
-contacts/*.csv          # Tus contactos reales
-images/*               # Tus imágenes personales
-evolution_data/        # Datos de WhatsApp
-logs/                  # Logs con información sensible
-.env                   # Variables de entorno con credenciales
-```
-
 ### 🛡️ **Configuración Inicial Segura**
 
 ```bash
@@ -389,22 +373,6 @@ vim contacts/contacts.csv   # Añadir tus contactos reales
 # 3. Añadir tus imágenes
 cp mi_imagen.png images/    # Tus imágenes NO se suben a git
 ```
-
-### Buenas Prácticas Implementadas
-- ✅ Sanitización de logs (previene log injection)
-- ✅ Validación de entrada de datos
-- ✅ Variables de entorno para credenciales
-- ✅ Manejo seguro de excepciones
-- ✅ Dependencias sin vulnerabilidades conocidas
-- ✅ **.gitignore robusto** que protege datos sensibles
-
-### Recomendaciones
-- 🔐 **Cambia el API_KEY** por defecto en producción
-- 🚫 **Nunca subas** archivos `.env` o `contacts.csv` a repositorios públicos
-- 🔄 **Rota credenciales** periódicamente
-- 📱 **Usa números verificados** para evitar bloqueos de WhatsApp
-- ⏱️ **Respeta delays** entre mensajes para evitar spam detection
-
 ## 🤝 Contribuir
 
 ¡Las contribuciones son bienvenidas! Por favor:
@@ -417,24 +385,16 @@ cp mi_imagen.png images/    # Tus imágenes NO se suben a git
 
 ### Formato de Commits
 ```bash
-feat: nueva funcionalidad
-fix: corrección de bug
-docs: actualización de documentación
-refactor: refactorización de código
-test: agregar pruebas
+[feat]: nueva funcionalidad
+[fix]: corrección de bug
+[docs]: actualización de documentación
+[refactor]: refactorización de código
+[test]: agregar pruebas
 ```
 
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 📞 Soporte
-
-Si tienes problemas o preguntas:
-
-1. **Revisa** la sección [Troubleshooting](#-troubleshooting)
-2. **Busca** en los issues existentes
-3. **Crea** un nuevo issue con detalles del problema
 
 ---
 
@@ -517,21 +477,6 @@ make dev
 - **WARNING**: Advertencias que no detienen la ejecución
 - **ERROR**: Errores que requieren atención
 
-## 🔒 Seguridad
-
-### ⚠️ **IMPORTANTE - Archivos Sensibles**
-
-Este proyecto incluye un `.gitignore` que protege archivos sensibles:
-
-```bash
-# Archivos que NO se suben a GitHub:
-contacts/*.csv          # Tus contactos reales
-images/*               # Tus imágenes personales
-evolution_data/        # Datos de WhatsApp
-logs/                  # Logs con información sensible
-.env                   # Variables de entorno con credenciales
-```
-
 ### 🛡️ **Configuración Inicial Segura**
 
 ```bash
@@ -545,51 +490,6 @@ vim contacts/contacts.csv   # Añadir tus contactos reales
 
 # 3. Añadir tus imágenes
 cp mi_imagen.png images/    # Tus imágenes NO se suben a git
-```
-
-### Buenas Prácticas Implementadas
-- ✅ Sanitización de logs (previene log injection)
-- ✅ Validación de entrada de datos
-- ✅ Variables de entorno para credenciales
-- ✅ Manejo seguro de excepciones
-- ✅ Dependencias sin vulnerabilidades conocidas
-- ✅ **.gitignore robusto** que protege datos sensibles
-
-### Recomendaciones
-1. **Cambiar API_KEY** por defecto en `.env.local`
-2. **No commitear** archivos `.env.local` con credenciales
-3. **Usar HTTPS** en producción (`ENFORCE_HTTPS=true`)
-4. **Monitorear logs** regularmente
-5. **Actualizar dependencias** periódicamente
-
-## 🤝 Contribuir
-
-### Desarrollo
-
-```bash
-# 1. Fork del repositorio
-# 2. Clonar tu fork
-git clone <tu-fork-url>
-cd next-message
-
-# 3. Instalar dependencias de desarrollo
-make install
-
-# 4. Ejecutar pruebas
-make test
-
-# 5. Verificar calidad de código
-make lint
-make format
-```
-
-### Estructura de Commits
-```
-feat: agregar nueva funcionalidad
-fix: corregir bug
-docs: actualizar documentación
-test: agregar o modificar pruebas
-refactor: refactorizar código
 ```
 
 ## 📝 Licencia
