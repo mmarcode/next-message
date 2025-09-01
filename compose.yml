@@ -1,0 +1,25 @@
+services:
+  evolution-api:
+    image: atendai/evolution-api:v1.5.0
+    container_name: evolution-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_TYPE=http
+      - SERVER_PORT=8080
+      - LOG_LEVEL=INFO
+      - DEL_INSTANCE=false
+      - CONFIG_SESSION_PHONE_CLIENT=Evolution API
+      - CONFIG_SESSION_PHONE_NAME=Chrome
+      - AUTHENTICATION_TYPE=apikey
+      - AUTHENTICATION_API_KEY=${API_KEY:-evolution_api_key}
+      - AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES=true
+    volumes:
+      - ./evolution_data:/evolution/instances
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

@@ -1,0 +1,4 @@
+name,phone,message_type,content,caption
+Usuario Ejemplo,+525512345678,text,Hola! Este es un mensaje de prueba desde Next Message.,
+Usuario Imagen con texto,+525512345678,image,mi_imagen.png,Mi imagen personalizada
+Usuario Imagen sin texto,+525512345678,image,mi_imagen.png,
